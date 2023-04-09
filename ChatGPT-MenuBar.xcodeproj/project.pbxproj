@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD8E29E29B6C00AC7382 /* PluginEngine */; };
+		CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */; };
+		CDB5252129DC203300D47035 /* ChatGPT_MenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */; };
+		CDB5252329DC203300D47035 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5252229DC203300D47035 /* ContentView.swift */; };
+		CDB5252529DC203400D47035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB5252429DC203400D47035 /* Assets.xcassets */; };
+		CDB5252829DC203400D47035 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB5252729DC203400D47035 /* Preview Assets.xcassets */; };
+		CDB5253429DC8F0C00D47035 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5253329DC8F0C00D47035 /* ChatBubble.swift */; };
+		CDB5253629DC901F00D47035 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5253529DC901F00D47035 /* ChatList.swift */; };
+		CDB5253929DC909C00D47035 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = CDB5253829DC909C00D47035 /* AnyCodable */; };
+		CDB5253B29DC92D200D47035 /* ChattingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5253A29DC92D200D47035 /* ChattingPage.swift */; };
+		CDE26B9F29DF2579008C771D /* MenuBarSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDE26B9E29DF2579008C771D /* MenuBarSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD6CBD8D29E27E1100AC7382 /* PluginEngine */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PluginEngine; path = packages/PluginEngine; sourceTree = "<group>"; };
+		CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatGPT-MenuBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT_MenuBarApp.swift; sourceTree = "<group>"; };
+		CDB5252229DC203300D47035 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDB5252429DC203400D47035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDB5252729DC203400D47035 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDB5252929DC203400D47035 /* ChatGPT_MenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatGPT_MenuBar.entitlements; sourceTree = "<group>"; };
+		CDB5253329DC8F0C00D47035 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		CDB5253529DC901F00D47035 /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
+		CDB5253A29DC92D200D47035 /* ChattingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage.swift; sourceTree = "<group>"; };
+		CDB5254C29DF255100D47035 /* MenuBarSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MenuBarSDK; path = packages/MenuBarSDK; sourceTree = "<group>"; };
+		CDE26BA029DF25A3008C771D /* ChatGPTPlugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatGPTPlugin; path = packages/ChatGPTPlugin; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDB5251A29DC203300D47035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE26B9F29DF2579008C771D /* MenuBarSDK in Frameworks */,
+				CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */,
+				CDB5253929DC909C00D47035 /* AnyCodable in Frameworks */,
+				CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDB5251429DC203300D47035 = {
+			isa = PBXGroup;
+			children = (
+				CDB5254929DF251E00D47035 /* Packages */,
+				CDB5251F29DC203300D47035 /* ChatGPT-MenuBar */,
+				CDB5251E29DC203300D47035 /* Products */,
+				CDB5253F29DF201300D47035 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDB5251E29DC203300D47035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDB5251F29DC203300D47035 /* ChatGPT-MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5253229DC8EF800D47035 /* Views */,
+				CDB5252F29DC20D900D47035 /* Pages */,
+				CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */,
+				CDB5252229DC203300D47035 /* ContentView.swift */,
+				CDB5252429DC203400D47035 /* Assets.xcassets */,
+				CDB5252929DC203400D47035 /* ChatGPT_MenuBar.entitlements */,
+				CDB5252629DC203400D47035 /* Preview Content */,
+			);
+			path = "ChatGPT-MenuBar";
+			sourceTree = "<group>";
+		};
+		CDB5252629DC203400D47035 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5252729DC203400D47035 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDB5252F29DC20D900D47035 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5253A29DC92D200D47035 /* ChattingPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		CDB5253229DC8EF800D47035 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5253329DC8F0C00D47035 /* ChatBubble.swift */,
+				CDB5253529DC901F00D47035 /* ChatList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDB5253F29DF201300D47035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDB5254929DF251E00D47035 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CD6CBD8D29E27E1100AC7382 /* PluginEngine */,
+				CDE26BA029DF25A3008C771D /* ChatGPTPlugin */,
+				CDB5254C29DF255100D47035 /* MenuBarSDK */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDB5251C29DC203300D47035 /* ChatGPT-MenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB5252C29DC203400D47035 /* Build configuration list for PBXNativeTarget "ChatGPT-MenuBar" */;
+			buildPhases = (
+				CDB5251929DC203300D47035 /* Sources */,
+				CDB5251A29DC203300D47035 /* Frameworks */,
+				CDB5251B29DC203300D47035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChatGPT-MenuBar";
+			packageProductDependencies = (
+				CDB5253829DC909C00D47035 /* AnyCodable */,
+				CDE26B9E29DF2579008C771D /* MenuBarSDK */,
+				CD6CBD8E29E29B6C00AC7382 /* PluginEngine */,
+				CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */,
+			);
+			productName = "ChatGPT-MenuBar";
+			productReference = CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDB5251529DC203300D47035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CDB5251C29DC203300D47035 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = CDB5251829DC203300D47035 /* Build configuration list for PBXProject "ChatGPT-MenuBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDB5251429DC203300D47035;
+			packageReferences = (
+				CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */,
+			);
+			productRefGroup = CDB5251E29DC203300D47035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDB5251C29DC203300D47035 /* ChatGPT-MenuBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDB5251B29DC203300D47035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB5252829DC203400D47035 /* Preview Assets.xcassets in Resources */,
+				CDB5252529DC203400D47035 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDB5251929DC203300D47035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB5253B29DC92D200D47035 /* ChattingPage.swift in Sources */,
+				CDB5253629DC901F00D47035 /* ChatList.swift in Sources */,
+				CDB5252329DC203300D47035 /* ContentView.swift in Sources */,
+				CDB5253429DC8F0C00D47035 /* ChatBubble.swift in Sources */,
+				CDB5252129DC203300D47035 /* ChatGPT_MenuBarApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CDB5252A29DC203400D47035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDB5252B29DC203400D47035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CDB5252D29DC203400D47035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ChatGPT-MenuBar/ChatGPT_MenuBar.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatGPT-MenuBar/Preview Content\"";
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirily11.ChatGPT-MenuBar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CDB5252E29DC203400D47035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ChatGPT-MenuBar/ChatGPT_MenuBar.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatGPT-MenuBar/Preview Content\"";
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirily11.ChatGPT-MenuBar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDB5251829DC203300D47035 /* Build configuration list for PBXProject "ChatGPT-MenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB5252A29DC203400D47035 /* Debug */,
+				CDB5252B29DC203400D47035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB5252C29DC203400D47035 /* Build configuration list for PBXNativeTarget "ChatGPT-MenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB5252D29DC203400D47035 /* Debug */,
+				CDB5252E29DC203400D47035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD6CBD8E29E29B6C00AC7382 /* PluginEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PluginEngine;
+		};
+		CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ChatGPTPlugin;
+		};
+		CDB5253829DC909C00D47035 /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+		CDE26B9E29DF2579008C771D /* MenuBarSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MenuBarSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CDB5251529DC203300D47035 /* Project object */;
+}
