@@ -34,6 +34,14 @@ struct ChatList: View {
                                 }
                             }
                         }.id(history.id)
+                            .contextMenu {
+                                if let message = history.message, let text = message.value as? String {
+                                    Button("Copy") {
+                                        NSPasteboard.general.clearContents()
+                                        NSPasteboard.general.setString(text, forType: .string)
+                                    }
+                                }
+                            }
                     }
                 }
                 .onChange(of: chatHistory, perform: { newHistory in
