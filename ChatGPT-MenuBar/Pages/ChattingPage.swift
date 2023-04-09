@@ -19,6 +19,9 @@ struct ChattingPage: View {
                 Text("GPT Swift")
                     .fontWeight(.bold)
                 Spacer()
+                Button("Quit") {
+                    NSApplication.shared.terminate(nil)
+                }
                 Button {
                     NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
                 } label: {
