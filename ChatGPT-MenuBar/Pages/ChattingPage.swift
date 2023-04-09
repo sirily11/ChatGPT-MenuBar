@@ -28,6 +28,12 @@ struct ChattingPage: View {
             ChatList(chatHistory: pluginClient.chatHistroy)
             Spacer()
             HStack {
+                Button {
+                    pluginClient.clearMessages()
+                } label: {
+                    Image(systemName: "trash.fill")
+                }
+
                 TextField("Message", text: $pluginClient.textInputContent, axis: .vertical)
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)

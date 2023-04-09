@@ -39,4 +39,13 @@ enum ChatMessageModel {
             return []
         }
     }
+
+    static func clear() {
+        let filename = getDocumentsDirectory().appendingPathComponent("messages.json")
+        do {
+            try FileManager.default.removeItem(at: filename)
+        } catch {
+            print("Unable to delete data.")
+        }
+    }
 }

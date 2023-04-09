@@ -13,7 +13,7 @@ public class PluginClient: Client, ObservableObject {
     @Published public var chatHistroy: [ChatMessage] = []
     
     public init() {
-        chatHistroy =  ChatMessageModel.load()
+        chatHistroy = ChatMessageModel.load()
     }
     
     @MainActor
@@ -54,5 +54,11 @@ public class PluginClient: Client, ObservableObject {
     
     public func saveMessages() {
         ChatMessageModel.save(with: chatHistroy)
+    }
+    
+    @MainActor
+    public func clearMessages() {
+        chatHistroy.removeAll()
+        ChatMessageModel.clear()
     }
 }
