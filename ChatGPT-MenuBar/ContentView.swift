@@ -8,6 +8,7 @@
 import ChatGPTPlugin
 import PluginEngine
 import SwiftUI
+import MarkdownRenderingPlugin
 
 struct ContentView: View {
     @EnvironmentObject var client: PluginClient
@@ -16,7 +17,8 @@ struct ContentView: View {
     var body: some View {
         ChattingPage()
             .task {
-                try? await engine.addPlugin(ChatGPTPlugin(client: client))
+                _ = try? await engine.addPlugin(ChatGPTPlugin(client: client))
+                _ = try? await engine.addPlugin(MarkdownRenderingPlugin(client: client))
             }
     }
 }

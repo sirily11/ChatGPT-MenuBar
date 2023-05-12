@@ -8,9 +8,11 @@
 import AnyCodable
 import MarkdownUI
 import MenuBarSDK
+import PluginEngine
 import SwiftUI
 
 struct ChatList: View {
+    @EnvironmentObject var engine: PluginEngine
     let chatHistory: [ChatMessage]
 
     var body: some View {
@@ -21,17 +23,17 @@ struct ChatList: View {
                         Group {
                             if history.role == .sender {
                                 ChatBubble(direction: .right) {
-                                    buildContentView(message: history.message)
+                                    engine.renderMessage(message: history)
                                         .padding(10)
                                         .foregroundColor(Color.white)
                                         .background(Color.blue)
                                 }
                             } else {
                                 ChatBubble(direction: .left) {
-                                    buildContentView(message: history.message)
+                                    engine.renderMessage(message: history)
                                         .padding(10)
                                         .foregroundColor(Color.white)
-                                        .background(Color.gray)
+                                        .background(Color(NSColor.darkGray))
                                 }
                             }
                         }.id(history.id)
@@ -53,29 +55,18 @@ struct ChatList: View {
             }
         }
     }
-
-    @ViewBuilder
-    func buildContentView(message: AnyCodable?) -> some View {
-        if let message = message?.value as? String {
-            Markdown(message)
-                .markdownTheme(.chatTheme)
-                .markdownCodeSyntaxHighlighter(SplashCodeSyntaxHighlighter(theme: .wwdc18(withFont: .init(size: 14))))
-                .textSelection(.enabled)
-        }
-        EmptyView()
-    }
 }
 
-struct ChatList_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatList(chatHistory: [
-            .init(role: .sender, message: """
-            # Hello world
-            ```swift
-            print("Hello world")
-            ```
-            """),
-            .init(role: .receiver, message: "World")
-        ])
-    }
-}
+// struct ChatList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChatList(chatHistory: [
+//            .init(role: .sender, message: """
+//            # Hello world
+//            ```swift
+//            print("Hello world")
+//            ```
+//            """),
+//            .init(role: .receiver, message: "World")
+//        ])
+//    }
+// }

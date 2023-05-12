@@ -43,7 +43,7 @@ struct Demo: View {
                     Text("Hello!")
                         .padding(.all, 5)
                         .foregroundColor(Color.white)
-                        .background(Color.secondary)
+                        .background(Color.gray)
                 }
                 ChatBubble(direction: .right) {
                     Markdown("This is a **bold** *italic* text.")
