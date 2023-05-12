@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD359C6F2A0E045C0012DF52 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD359C6E2A0E045C0012DF52 /* MarkdownUI */; };
+		CD359C712A0E05870012DF52 /* ChatTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD359C702A0E05870012DF52 /* ChatTheme.swift */; };
+		CD359C742A0E07230012DF52 /* SplashSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD359C732A0E07230012DF52 /* SplashSyntaxHighlighter.swift */; };
+		CD359C772A0E073C0012DF52 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = CD359C762A0E073C0012DF52 /* Splash */; };
 		CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD8E29E29B6C00AC7382 /* PluginEngine */; };
 		CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */; };
 		CDB5252129DC203300D47035 /* ChatGPT_MenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */; };
@@ -22,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		CD359C6C2A0DE7F80012DF52 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CD359C702A0E05870012DF52 /* ChatTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTheme.swift; sourceTree = "<group>"; };
+		CD359C732A0E07230012DF52 /* SplashSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSyntaxHighlighter.swift; sourceTree = "<group>"; };
 		CD6CBD8D29E27E1100AC7382 /* PluginEngine */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PluginEngine; path = packages/PluginEngine; sourceTree = "<group>"; };
 		CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatGPT-MenuBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT_MenuBarApp.swift; sourceTree = "<group>"; };
@@ -45,12 +51,22 @@
 				CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */,
 				CDB5253929DC909C00D47035 /* AnyCodable in Frameworks */,
 				CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */,
+				CD359C6F2A0E045C0012DF52 /* MarkdownUI in Frameworks */,
+				CD359C772A0E073C0012DF52 /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD359C722A0E07120012DF52 /* SyntaxHighlighter */ = {
+			isa = PBXGroup;
+			children = (
+				CD359C732A0E07230012DF52 /* SplashSyntaxHighlighter.swift */,
+			);
+			path = SyntaxHighlighter;
+			sourceTree = "<group>";
+		};
 		CDB5251429DC203300D47035 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +119,10 @@
 		CDB5253229DC8EF800D47035 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD359C722A0E07120012DF52 /* SyntaxHighlighter */,
 				CDB5253329DC8F0C00D47035 /* ChatBubble.swift */,
 				CDB5253529DC901F00D47035 /* ChatList.swift */,
+				CD359C702A0E05870012DF52 /* ChatTheme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +165,8 @@
 				CDE26B9E29DF2579008C771D /* MenuBarSDK */,
 				CD6CBD8E29E29B6C00AC7382 /* PluginEngine */,
 				CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */,
+				CD359C6E2A0E045C0012DF52 /* MarkdownUI */,
+				CD359C762A0E073C0012DF52 /* Splash */,
 			);
 			productName = "ChatGPT-MenuBar";
 			productReference = CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */;
@@ -178,6 +198,8 @@
 			mainGroup = CDB5251429DC203300D47035;
 			packageReferences = (
 				CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */,
+				CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */,
 			);
 			productRefGroup = CDB5251E29DC203300D47035 /* Products */;
 			projectDirPath = "";
@@ -206,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB5253B29DC92D200D47035 /* ChattingPage.swift in Sources */,
+				CD359C742A0E07230012DF52 /* SplashSyntaxHighlighter.swift in Sources */,
+				CD359C712A0E05870012DF52 /* ChatTheme.swift in Sources */,
 				CDB5253629DC901F00D47035 /* ChatList.swift in Sources */,
 				CDB5252329DC203300D47035 /* ContentView.swift in Sources */,
 				CDB5253429DC8F0C00D47035 /* ChatBubble.swift in Sources */,
@@ -409,6 +433,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Splash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.0;
+			};
+		};
 		CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flight-School/AnyCodable";
@@ -420,6 +460,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CD359C6E2A0E045C0012DF52 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		CD359C762A0E073C0012DF52 /* Splash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */;
+			productName = Splash;
+		};
 		CD6CBD8E29E29B6C00AC7382 /* PluginEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PluginEngine;

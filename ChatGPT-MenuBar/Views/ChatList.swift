@@ -6,6 +6,7 @@
 //
 
 import AnyCodable
+import MarkdownUI
 import MenuBarSDK
 import SwiftUI
 
@@ -56,7 +57,10 @@ struct ChatList: View {
     @ViewBuilder
     func buildContentView(message: AnyCodable?) -> some View {
         if let message = message?.value as? String {
-            Text(message)
+            Markdown(message)
+                .markdownTheme(.chatTheme)
+                .markdownCodeSyntaxHighlighter(SplashCodeSyntaxHighlighter(theme: .wwdc18(withFont: .init(size: 14))))
+                .textSelection(.enabled)
         }
         EmptyView()
     }
@@ -65,7 +69,12 @@ struct ChatList: View {
 struct ChatList_Previews: PreviewProvider {
     static var previews: some View {
         ChatList(chatHistory: [
-            .init(role: .sender, message: "Hello"),
+            .init(role: .sender, message: """
+            # Hello world
+            ```swift
+            print("Hello world")
+            ```
+            """),
             .init(role: .receiver, message: "World")
         ])
     }
