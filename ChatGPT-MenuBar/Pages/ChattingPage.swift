@@ -32,7 +32,9 @@ struct ChattingPage: View {
             Spacer()
             HStack {
                 Button {
-                    pluginClient.clearMessages()
+                    Task {
+                        await onClear()
+                    }
                 } label: {
                     Image(systemName: "trash.fill")
                 }
@@ -66,6 +68,11 @@ struct ChattingPage: View {
         .onAppear {
             print("Chatting")
         }
+    }
+
+    func onClear() async {
+        pluginClient.clearMessages()
+        try? await pluginEngine.onHistoryClear()
     }
 
     func onSubmit() async {

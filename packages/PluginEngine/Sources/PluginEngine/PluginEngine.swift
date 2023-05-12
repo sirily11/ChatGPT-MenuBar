@@ -84,6 +84,19 @@ public class PluginEngine: ObservableObject {
         return inputMessage
     }
 
+    @MainActor
+    public func onHistoryClear() async throws {
+        for plugin in plugins {
+            let result = try await plugin.onHistoryClear()
+            if result == .skip {
+                continue
+            }
+            else if result == .stop {
+                break
+            }
+        }
+    }
+
     @ViewBuilder
     public func renderSettingsView() -> some View {
         SettingsView {

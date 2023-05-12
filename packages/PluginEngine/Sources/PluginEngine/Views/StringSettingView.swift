@@ -27,9 +27,19 @@ struct StringSettingView: View {
     }
 
     var body: some View {
-        TextField(setting.title, text: $text)
-            .onChange(of: text) { newValue in
-                self.onUpdateValue(setting.name, newValue)
+        Group {
+            if let menus = setting.selections {
+                Picker(selection: $text, label: Text(setting.title)) {
+                    ForEach(menus, id: \.self) { menu in
+                        Text(menu).tag(menu)
+                    }
+                }
+            } else {
+                TextField(setting.title, text: $text)
             }
+        }
+        .onChange(of: text) { newValue in
+            self.onUpdateValue(setting.name, newValue)
+        }
     }
 }
