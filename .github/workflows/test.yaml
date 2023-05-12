@@ -28,3 +28,48 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
+  create-release:
+    if: ${{ github.event.pusher.name != 'github action' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get next version
+        id: version
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          branch: main
+          dry_run: true
+      - run: echo Released ${{ steps.version.outputs.new_release_version }}
+      - uses: sirily11/ios-bump-version@master
+        with:
+          version: ${{ steps.version.outputs.new_release_version }}
+          build-number: ${{github.run_attempt }}
+      - uses: EndBug/add-and-commit@v9
+        name: Add and commit version changed
+        with:
+          message: "Release ${{ steps.version.outputs.new_release_version }}"
+          push: false
+        if: steps.version.outputs.new_release_version != ''
+      - name: Create Release
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          branch: main
+          dry_run: false
+      - uses: EndBug/add-and-commit@v9
+        name: Push release commit
+        with:
+          push: ${{ github.ref == 'refs/heads/main' }}
+      - name: Push release
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+        if: ${{ github.ref == 'refs/heads/main' }}
