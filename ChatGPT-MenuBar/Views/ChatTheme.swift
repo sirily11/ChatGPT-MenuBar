@@ -9,7 +9,7 @@ import Foundation
 import MarkdownUI
 import SwiftUI
 
-private extension Color {
+extension Color {
     static let text = Color(
         light: Color(rgba: 0x0606_06ff), dark: Color(rgba: 0xfbfb_fcff)
     )
@@ -136,18 +136,7 @@ public extension Theme {
             .fixedSize(horizontal: false, vertical: true)
         }
         .codeBlock { configuration in
-            ScrollView(.horizontal) {
-                configuration.label
-                    .relativeLineSpacing(.em(0.225))
-                    .markdownTextStyle {
-                        FontFamilyVariant(.monospaced)
-                        FontSize(.em(0.85))
-                    }
-                    .padding(16)
-            }
-            .background(Color.secondaryBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 6))
-            .markdownMargin(top: 0, bottom: 16)
+            CodeBlockView(configuration: configuration)
         }
         .listItem { configuration in
             configuration.label
