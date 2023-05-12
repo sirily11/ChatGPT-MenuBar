@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD359C6F2A0E045C0012DF52 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD359C6E2A0E045C0012DF52 /* MarkdownUI */; };
-		CD359C772A0E073C0012DF52 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = CD359C762A0E073C0012DF52 /* Splash */; };
 		CD359C7C2A0E15360012DF52 /* MarkdownRenderingPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD359C7B2A0E15360012DF52 /* MarkdownRenderingPlugin */; };
 		CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD8E29E29B6C00AC7382 /* PluginEngine */; };
 		CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */; };
@@ -50,8 +48,6 @@
 				CD6CBD8F29E29B6C00AC7382 /* PluginEngine in Frameworks */,
 				CDB5253929DC909C00D47035 /* AnyCodable in Frameworks */,
 				CD6CBD9129E2EEFE00AC7382 /* ChatGPTPlugin in Frameworks */,
-				CD359C6F2A0E045C0012DF52 /* MarkdownUI in Frameworks */,
-				CD359C772A0E073C0012DF52 /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +151,6 @@
 				CDE26B9E29DF2579008C771D /* MenuBarSDK */,
 				CD6CBD8E29E29B6C00AC7382 /* PluginEngine */,
 				CD6CBD9029E2EEFE00AC7382 /* ChatGPTPlugin */,
-				CD359C6E2A0E045C0012DF52 /* MarkdownUI */,
-				CD359C762A0E073C0012DF52 /* Splash */,
 				CD359C7B2A0E15360012DF52 /* MarkdownRenderingPlugin */,
 			);
 			productName = "ChatGPT-MenuBar";
@@ -189,8 +183,6 @@
 			mainGroup = CDB5251429DC203300D47035;
 			packageReferences = (
 				CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */,
-				CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
-				CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */,
 			);
 			productRefGroup = CDB5251E29DC203300D47035 /* Products */;
 			projectDirPath = "";
@@ -424,22 +416,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/Splash";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.16.0;
-			};
-		};
 		CDB5253729DC909C00D47035 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flight-School/AnyCodable";
@@ -451,16 +427,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD359C6E2A0E045C0012DF52 /* MarkdownUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD359C6D2A0E045C0012DF52 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
-			productName = MarkdownUI;
-		};
-		CD359C762A0E073C0012DF52 /* Splash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD359C752A0E073C0012DF52 /* XCRemoteSwiftPackageReference "Splash" */;
-			productName = Splash;
-		};
 		CD359C7B2A0E15360012DF52 /* MarkdownRenderingPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MarkdownRenderingPlugin;
