@@ -2,12 +2,13 @@ import MenuBarSDK
 import SwiftUI
 
 public class PluginEngine: ObservableObject {
-    private(set) var plugins: [any PluginInterface] = []
+    @Published private(set) var plugins: [any PluginInterface] = []
     public init() {}
 
     /**
      Adds a plugin to the plugin engine
      */
+    @MainActor
     public func addPlugin(_ plugin: any PluginInterface) async throws -> Self {
         try? await plugin.initialize()
         plugins.append(plugin)
@@ -122,6 +123,23 @@ public class PluginEngine: ObservableObject {
             }
         }
         .frame(minWidth: 300, minHeight: 300)
+    }
+
+    @ViewBuilder
+    public func renderMessage(message: ChatMessage) -> some View {
+        VStack {
+            if plugins.count == 0 {
+                ProgressView()
+            }
+            else {
+                ForEach(plugins, id: \.id) { (plugin: any PluginInterface) in
+                    let (_, view) = plugin.renderMessage(message: message)
+                    if let view = view {
+                        view
+                    }
+                }
+            }
+        }
     }
 }
 
