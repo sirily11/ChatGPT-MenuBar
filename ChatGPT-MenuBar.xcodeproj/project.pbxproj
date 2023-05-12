@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD359C6C2A0DE7F80012DF52 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD6CBD8D29E27E1100AC7382 /* PluginEngine */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PluginEngine; path = packages/PluginEngine; sourceTree = "<group>"; };
 		CDB5251D29DC203300D47035 /* ChatGPT-MenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatGPT-MenuBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB5252029DC203300D47035 /* ChatGPT_MenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT_MenuBarApp.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		CDB5251429DC203300D47035 = {
 			isa = PBXGroup;
 			children = (
+				CD359C6C2A0DE7F80012DF52 /* README.md */,
 				CDB5254929DF251E00D47035 /* Packages */,
 				CDB5251F29DC203300D47035 /* ChatGPT-MenuBar */,
 				CDB5251E29DC203300D47035 /* Products */,

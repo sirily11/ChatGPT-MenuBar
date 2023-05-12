@@ -8,10 +8,16 @@
 import MenuBarSDK
 import SwiftUI
 
+/**
+ Update the current value with the `name` and `value`
+ */
 typealias OnUpdateValue = (String, Any) -> Void
 typealias GetSettingNames = () -> [(String, String)]
 typealias GetSettingsByName = (String) -> [MenuBarSDK.Settings]?
 typealias GetSettingsViewByName = (String) -> AnyView?
+/**
+ Refresh the setting's value by its name
+ */
 typealias Refresh = (String) async -> Void
 
 struct SettingsView: View {
@@ -32,7 +38,7 @@ struct SettingsView: View {
                         if let settingsView = getSettingsViewByName(name) {
                             settingsView
                         }
-                        
+
                         HStack {
                             Button("Reload") {
                                 Task {

@@ -23,6 +23,7 @@ struct ChatGPT_MenuBarApp: App {
 
         Settings {
             pluginEngine.renderSettingsView()
+                .frame(minWidth: 400, minHeight: 300)
         }
 
         WindowGroup {

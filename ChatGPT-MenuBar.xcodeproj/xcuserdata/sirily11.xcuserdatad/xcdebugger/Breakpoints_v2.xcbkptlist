@@ -3,4 +3,84 @@
    uuid = "E2F145F7-AA6B-46D9-865C-BC72DF103208"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "774DDBC5-0A28-4EC7-893C-9121C8383D60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "packages/ChatGPTPlugin/Sources/ChatGPTPlugin/ChatGPTPlugin.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "afterSubmit(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "774DDBC5-0A28-4EC7-893C-9121C8383D60 - 4426a4b61e24744d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for ChatGPTPlugin.ChatGPTPlugin.afterSubmit(message: MenuBarSDK.ChatMessage) async throws -&gt; (MenuBarSDK.ExecutionResult, MenuBarSDK.ChatMessage)"
+                  moduleName = "ChatGPT-MenuBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sirily11/Desktop/metaverse/ChatGPT-MenuBar/packages/ChatGPTPlugin/Sources/ChatGPTPlugin/ChatGPTPlugin.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "774DDBC5-0A28-4EC7-893C-9121C8383D60 - ffbd06323ba54074"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for ChatGPTPlugin.ChatGPTPlugin.afterSubmit(message: MenuBarSDK.ChatMessage) async throws -&gt; (MenuBarSDK.ExecutionResult, MenuBarSDK.ChatMessage)"
+                  moduleName = "ChatGPT-MenuBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sirily11/Desktop/metaverse/ChatGPT-MenuBar/packages/ChatGPTPlugin/Sources/ChatGPTPlugin/ChatGPTPlugin.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "774DDBC5-0A28-4EC7-893C-9121C8383D60 - 1772eb8d3b9eb04f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for ChatGPTPlugin.ChatGPTPlugin.afterSubmit(message: MenuBarSDK.ChatMessage) async throws -&gt; (MenuBarSDK.ExecutionResult, MenuBarSDK.ChatMessage)"
+                  moduleName = "ChatGPT-MenuBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sirily11/Desktop/metaverse/ChatGPT-MenuBar/packages/ChatGPTPlugin/Sources/ChatGPTPlugin/ChatGPTPlugin.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "774DDBC5-0A28-4EC7-893C-9121C8383D60 - 94644905e024ae50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for ChatGPTPlugin.ChatGPTPlugin.afterSubmit(message: MenuBarSDK.ChatMessage) async throws -&gt; (MenuBarSDK.ExecutionResult, MenuBarSDK.ChatMessage)"
+                  moduleName = "ChatGPT-MenuBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sirily11/Desktop/metaverse/ChatGPT-MenuBar/packages/ChatGPTPlugin/Sources/ChatGPTPlugin/ChatGPTPlugin.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

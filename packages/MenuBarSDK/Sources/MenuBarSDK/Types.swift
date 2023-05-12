@@ -84,9 +84,19 @@ public struct Settings {
         }
     }
 
+    public let selections: [String]?
+
     public init(name: String, title: String, type: UIType) {
         self.name = name
         self.title = title
         self.type = type
+        self.selections = nil
+    }
+
+    public init(name: String, title: String, type: UIType, selections: [String]) {
+        self.name = name
+        self.title = title
+        self.type = type
+        self.selections = selections
     }
 }
