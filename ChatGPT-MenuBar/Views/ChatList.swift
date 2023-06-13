@@ -57,16 +57,17 @@ struct ChatList: View {
     }
 }
 
-// struct ChatList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChatList(chatHistory: [
-//            .init(role: .sender, message: """
-//            # Hello world
-//            ```swift
-//            print("Hello world")
-//            ```
-//            """),
-//            .init(role: .receiver, message: "World")
-//        ])
-//    }
-// }
+ struct ChatList_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatList(chatHistory: [
+            .init(role: .sender, message: """
+            # Hello world
+            ```swift
+            print("Hello world")
+            ```
+            """),
+            .init(role: .receiver, message: "World")
+        ])
+        .environmentObject(PluginEngine())
+    }
+ }
