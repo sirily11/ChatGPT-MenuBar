@@ -19,17 +19,17 @@ struct ChattingPage: View {
                 Text("GPT Swift")
                     .fontWeight(.bold)
                 Spacer()
-                Button("Quit") {
+                Button(action: {
                     NSApplication.shared.terminate(nil)
-                }
-                .background(Color(nsColor: .darkGray))
-                
+                }, label: {
+                    Text("Quite")
+                })
+
                 Button {
                     NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
                 } label: {
                     Image(systemName: "gearshape.fill")
                 }
-                .background(Color(nsColor: .darkGray))
             }
             ChatList(chatHistory: pluginClient.chatHistroy)
             Spacer()
@@ -41,7 +41,6 @@ struct ChattingPage: View {
                 } label: {
                     Image(systemName: "trash.fill")
                 }
-                .background(Color(nsColor: .darkGray))
 
                 TextField("Message", text: $pluginClient.textInputContent, axis: .vertical)
                     .lineLimit(3)
@@ -65,7 +64,6 @@ struct ChattingPage: View {
                         await onSubmit()
                     }
                 }
-                .background(Color(nsColor: .darkGray))
             }
         }
         .padding()
@@ -107,5 +105,7 @@ extension View {
 struct ChattingPage_Previews: PreviewProvider {
     static var previews: some View {
         ChattingPage()
+            .environmentObject(PluginClient())
+            .environmentObject(PluginEngine())
     }
 }
